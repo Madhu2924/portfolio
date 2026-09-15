@@ -1,6 +1,5 @@
 // Portfolio markup (authored as HTML, injected at render time).
 import profileAsset from "@/assets/profile.jpg.asset.json";
-import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 export const portfolioHtml = `
 
@@ -66,7 +65,7 @@ export const portfolioHtml = `
           <p class="headline">Aspiring <span id="typedRole">Data Analyst</span><span class="caret">|</span></p>
           <p class="intro">I am a final-year Computer Science and Business Systems student with a strong interest in Data Analytics. I enjoy learning new technologies, solving real-world problems using data, and continuously improving my analytical and technical skills through projects and internships.</p>
           <div class="hero-actions">
-            <a href="__RESUME__" class="btn btn-dark" download="Madhumitha_MJ_Resume.pdf">Download Resume</a>
+            <a href="/resume.pdf" class="btn btn-dark" download="Madhumitha_MJ_Resume.pdf">Download Resume</a>
             <a href="#skills" class="btn btn-outline">View Skills</a>
             <a href="#contact" class="btn btn-ghost">Contact Me →</a>
           </div>
@@ -652,5 +651,4 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
 </script>
 `
-  .replaceAll("__PROFILE__", profileAsset.url)
-  .replaceAll("__RESUME__", resumeAsset.url);
+  .replaceAll("__PROFILE__", profileAsset.url);
